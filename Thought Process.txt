@@ -1,0 +1,5 @@
+Because the question requires it to be "rearranged," we need to use the definition of a palindrome to determine if the string can be rearranged into one. 
+In a palindrome, each character appears in pairs, unless the length of the string is odd, in which case the middle character appears unpaired. 
+Therefore, we can use a map to count the occurrence of each character and use "isalpha(str[i])" and "tolower(str[i])" to determine if the current character is an English letter and force all letters to lowercase to avoid capital case issues. 
+After the loop, iterate from 0 to 26 once to ensure that the map value of each letter is even. 
+If there is more than one letter with an odd count (the case where the middle character appears unpaired), the string cannot be rearranged into a palindrome.
